@@ -10,7 +10,7 @@
       "id": 2,
       "text": "Buy groceries",
       "day": "May 6th at 10:00am",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 3,
@@ -28,12 +28,6 @@
       "id": 5,
       "text": "Go for a run",
       "day": "May 9th at 6:00pm",
-      "reminder": false
-    },
-    {
-      "id": 6,
-      "text": "Plan vacation",
-      "day": "May 10th at 3:00pm",
       "reminder": true
     }
   ]
