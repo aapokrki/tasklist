@@ -13,13 +13,14 @@ export class AddTaskComponent {
   text: string
   day: string
   reminder: boolean = false
-  showAddTask: boolean
+  information: string
+  showAddTask: boolean = false
   subscription: Subscription
 
   constructor(private uiService: UiService) {
-    this.subscription = this.uiService
-      .onToggle()
-      .subscribe((value) => (this.showAddTask = value))
+    this.subscription = this.uiService.onToggle().subscribe((value) => {
+      this.showAddTask = value
+    })
   }
 
   onSubmit() {
@@ -27,10 +28,16 @@ export class AddTaskComponent {
       alert('Please add a task!')
       return
     }
+    if (!this.day) {
+      alert('Please add a day!')
+      return
+    }
+
     const newTask = {
-      text: this.text,
+      title: this.text,
       day: this.day,
       reminder: this.reminder,
+      information: this.information,
     }
 
     this.onAddTask.emit(newTask)
@@ -38,5 +45,6 @@ export class AddTaskComponent {
     this.text = ''
     this.day = ''
     this.reminder = false
+    this.information = ''
   }
 }

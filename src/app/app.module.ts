@@ -18,6 +18,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 const appRoutes: Routes = [
   { path: '', redirectTo: 'tasks', pathMatch: 'full' },
   { path: 'tasks', component: TasksComponent },
+  { path: 'tasks/:id', component: TasksComponent },
+
   { path: 'about', component: AboutComponent },
   { path: '**', component: PageNotFoundComponent },
 ]

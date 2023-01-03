@@ -1,28 +1,39 @@
 {
   "tasks": [
     {
+      "id": 1,
+      "title": "Finish homework",
+      "day": "May 5th at 2:30pm",
+      "reminder": false,
+      "information": "This homework is for my math class and is due at the beginning of class tomorrow."
+    },
+    {
       "id": 2,
-      "text": "Buy groceries",
+      "title": "Buy groceries",
       "day": "May 6th at 10:00am",
-      "reminder": true
+      "reminder": false,
+      "information": "Make sure to buy milk, bread, and apples. Also, check for any sales or coupons before going to the store."
     },
     {
       "id": 3,
-      "text": "Schedule dentist appointment",
+      "title": "Schedule dentist appointment",
       "day": "May 7th at 1:00pm",
-      "reminder": true
-    },
-    {
-      "id": 4,
-      "text": "Attend team meeting",
-      "day": "May 8th at 9:00am",
-      "reminder": true
+      "reminder": true,
+      "information": "This is a follow-up appointment to check on the progress of my teeth cleaning."
     },
     {
       "id": 5,
-      "text": "Go for a run",
+      "title": "Go for a run",
       "day": "May 9th at 6:00pm",
-      "reminder": true
+      "reminder": false,
+      "information": "I like to go for a run around the neighborhood in the evenings to get some exercise and clear my mind."
+    },
+    {
+      "id": 6,
+      "title": "Plan vacation",
+      "day": "May 10th at 3:00pm",
+      "reminder": true,
+      "information": "I want to go somewhere warm and beachy for my vacation this year. I am thinking about destinations like Hawaii or the Caribbean."
     }
   ]
 }

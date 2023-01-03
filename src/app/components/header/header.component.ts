@@ -10,22 +10,23 @@ import { Router } from '@angular/router'
 })
 export class HeaderComponent {
   title: string = 'Helo world'
-  showAddTask: boolean
+  showAddTask: boolean = false
   subscription: Subscription
 
   constructor(private uiService: UiService, private router: Router) {
-    this.subscription = this.uiService
-      .onToggle()
-      .subscribe((value) => (this.showAddTask = value))
+    this.subscription = this.uiService.onToggle().subscribe((value) => {
+      this.showAddTask = value
+    })
   }
 
   ngOnInit(): void {}
 
   toggleAddTask() {
     this.uiService.toggleAddTask()
+    console.log(this.showAddTask)
   }
 
   hasRoute(route: string) {
-    return this.router.url === route
+    return this.router.url.startsWith(route)
   }
 }
